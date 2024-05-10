@@ -9,6 +9,7 @@ int main()
    scanf("%d",&matrix[i][j]);
    int primary=1,secondary=1;
    int validation1=0,validation2=0,validation3=1,validation4=1;
+   //accessing primary diagonal
    for(int i=1;i<=m;i++)
    for(int j=1;j<=n;j++){
       if(i==j)
@@ -18,6 +19,7 @@ int main()
    }
    if(primary==1)
    validation1=1;
+      //accesssing secondary diagonal
    for(int i=1;i<=m;i++)
    for(int j=1;j<=n;j++){
       if(i+j==n+1)
@@ -27,6 +29,7 @@ int main()
    }
    if(secondary==1)
    validation2=1;
+     // accessing non primary and non secondary diagonal
    if(validation1==1 && validation2==1)
    {
       for(int i=1;i<=m;i++){
